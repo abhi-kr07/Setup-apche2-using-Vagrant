@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "web-server"
   config.vm.box = "bento/ubuntu-20.04"
 
-  config.vm.network "forwarded_port", guest: 80 , host: 8080 , host_ip: "192.168.4.106"
+  config.vm.network "forwarded_port", guest: 80 , host: 8080 , host_ip: "<local-ip-addr>"
 
   config.vm.synced_folder "./html/", "/var/www/html"
 
